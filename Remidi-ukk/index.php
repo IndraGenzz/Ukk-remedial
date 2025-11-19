@@ -47,6 +47,7 @@
         // TAMPILKAN DATA
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
+                <td>{$row['id_alumni']}</td>
                 <td>{$row['Nama_Lengkap']}</td>
                 <td>{$row['Tahun_lulus']}</td>
                 <td>{$row['Jurusan']}</td>
