@@ -13,10 +13,10 @@
     <h2>Tambah alumni</h2>
     <form method="POST">
         <input type="text" name="Nama_Lengkap" placeholder="Nama" required>
-        <input type="number" name="Tahun_Lulus" placeholder="Tahunlulus" required>
+        <input type="number" name="Tahun_Lulus" placeholder="Tahun lulus" required>
         <input type="text" name="Jurusan" placeholder="jurusan" required>
         <input type="text" name="Pekerjaan_Saat_Ini" placeholder="Pekerjaan Saat Ini" required>
-        <input type="number" name="Nomor_Telepon" placeholder="no.telpon" required>
+        <input type="number" name="Nomor_Telepon" placeholder="no telpon" required>
         <input type="text" name="Email" placeholder="email" required>
         <textarea name="Alamat" placeholder="Alamat" required></textarea>
         <button type="submit" name="submit">Simpan</button
