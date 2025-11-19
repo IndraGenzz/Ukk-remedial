@@ -14,10 +14,11 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM alumni WHERE id_Al
     <h2>Edit Data Alumni</h2>
     <form method="POST">
         <label>Nama</label>
-        <input type="text" name="nama" value="<?= $data['Nama_Lengkap'] ?>" required>
+        <input type="text" name="nama_lengkap" value="<?= $data['Nama_Lengkap'] ?>" required>
         
+
         <label>Tahun Lulus</label>
-        <input type="number" name="tahun_lulus" value="<?= $data['Tahun_Lulus'] ?>" required>
+        <input type="number" name="tahun_lulus" value="<?= $data['Tahun_Lulus'] ? $data['Tahun_Lulus'] : '' ?>" required>
         
         <label>Jurusan</label>
         <select name="jurusan" required>
@@ -47,7 +48,7 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM alumni WHERE id_Al
     <?php
     if (isset($_POST['update'])) {
         $sql = "UPDATE alumni SET
-            Nama_Lengkap='$_POST[Nama_Lengkap]',
+            Nama_Lengkap='$_POST[nama_lengkap]',
             Tahun_Lulus='$_POST[tahun_lulus]',
             Jurusan='$_POST[jurusan]',
             Pekerjaan_Saat_Ini='$_POST[pekerjaan_saat_ini]',
